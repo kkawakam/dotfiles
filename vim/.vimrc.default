@@ -1,0 +1,42 @@
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+set nocompatible " be iMproved
+filetype off " required!
+syntax on
+
+"Line Numbers
+:set nu
+
+"Indent Configurations
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+"Powerline Settings
+set laststatus=2 " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colorst rtp+=~/.vim/bundle/vundle/
+
+"Backspace Bug Fix
+set backspace=2
+set backspace=indent,eol,start
+
+
+"Remap Keys
+nmap <F7> :NERDTreeToggle<CR>
+nmap <F8> :TagbarToggle<CR>
+
+"Automatically Start RainbowParentheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+" User Molokai colorscheme
+let g:molokai_original = 1
+colorscheme molokai
+
+"Git Gutter settings
+highlight clear SignColumn
