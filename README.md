@@ -12,9 +12,7 @@ vim +BundleInstall
 ```
 
 ##Install YouCompleteMe
-Refer to the Documentation...
-
-[YouCompleteMe Documentation](https://github.com/Valloric/YouCompleteMe)
+[Refer to the Documentation...](https://github.com/Valloric/YouCompleteMe)
 
 ##Install Javascript Linter and Tern
 Make sure YouCompleteMe is installed
