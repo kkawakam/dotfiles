@@ -25,6 +25,7 @@
  Bundle 'jelera/vim-javascript-syntax'
  Bundle 'pangloss/vim-javascript'
  Bundle 'nathanaelkane/vim-indent-guides'
+ Bundle 'marijnh/tern_for_vim'
 
 
  filetype plugin indent on     " required!
@@ -74,7 +75,9 @@
  "Git Gutter settings
  highlight clear SignColumn
 
- "No Scratch Preview Window
+ "YouCompleteMe setttings
+ let g:ycm_add_preview_to_completeopt=0
+ let g:ycm_confirm_extra_conf=0
  set completeopt-=preview
  
  "Syntastic Configuration
