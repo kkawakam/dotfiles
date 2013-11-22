@@ -3,7 +3,7 @@
 1. Sym link the vimrc in the repo to ~/.vimrc
 1. Use vundle to install all vim plugins
 
-``
+```
 git clone https://github.com/kkawakam/dotfiles.git 
 ln -s dotfiles/vim/vimrc ~/.vimrc
 vim +BundleInstall
@@ -18,7 +18,7 @@ Make sure YouCompleteMe is installed
 1. Install [Node.js](http://nodejs.org/)
 1. Install JShint using npm
 
-``
+```
 npm install -g jshint
 ```
 
