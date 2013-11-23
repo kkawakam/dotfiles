@@ -1,6 +1,6 @@
-##Install Base Vim Configuration 
-No ycm or javascript support
+##Installation Instructions
 
+###Install Base Vim Configuration
 1. Clone repo into directory of your choice
 1. Sym link the vimrc in the repo to ~/.vimrc
 1. Use vundle to install all vim plugins
@@ -11,10 +11,10 @@ ln -s dotfiles/vim/vimrc ~/.vimrc
 vim +BundleInstall
 ```
 
-##Install YouCompleteMe
+###Install YouCompleteMe
 [Refer to the Documentation...](https://github.com/Valloric/YouCompleteMe)
 
-##Install Javascript Linter and Tern
+###Install Javascript Linter and Tern
 Make sure YouCompleteMe is installed
 
 1. Install [Node.js](http://nodejs.org/)
