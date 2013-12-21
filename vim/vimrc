@@ -11,7 +11,7 @@
  " My Bundles here:
  "
  " original repos on github
- Bundle 'Lokaltog/powerline'
+ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
  Bundle 'tomasr/molokai'
  Bundle 'majutsushi/tagbar'
  Bundle 'scrooloose/syntastic'
