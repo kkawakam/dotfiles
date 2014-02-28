@@ -20,12 +20,14 @@
  Bundle 'scrooloose/nerdcommenter'
  Bundle 'airblade/vim-gitgutter'
  Bundle 'tpope/vim-fugitive'
+ Bundle 'tpope/vim-rails'
  Bundle 'Raimondi/delimitMate'
  Bundle 'Valloric/YouCompleteMe'
  Bundle 'jelera/vim-javascript-syntax'
  Bundle 'pangloss/vim-javascript'
  Bundle 'nathanaelkane/vim-indent-guides'
  Bundle 'marijnh/tern_for_vim'
+
 
 
  filetype plugin indent on     " required!
