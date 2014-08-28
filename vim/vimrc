@@ -1,86 +1,90 @@
- set nocompatible               " be iMproved
- filetype off                   " required!
+set nocompatible               " be iMproved
+filetype off                   " required!
 
- set rtp+=~/.vim/bundle/vundle/
- call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+" call vundle#begin('~/some/path/here')
 
- " let Vundle manage Vundle
- " required! 
- Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'gmarik/vundle'
 
- " My Bundles here:
- "
- " original repos on github
- Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
- Bundle 'tomasr/molokai'
- Bundle 'majutsushi/tagbar'
- Bundle 'scrooloose/syntastic'
- Bundle 'kien/rainbow_parentheses.vim'
- Bundle 'scrooloose/nerdtree'
- Bundle 'scrooloose/nerdcommenter'
- Bundle 'airblade/vim-gitgutter'
- Bundle 'tpope/vim-fugitive'
- Bundle 'tpope/vim-rails'
- Bundle 'Raimondi/delimitMate'
- Bundle 'Valloric/YouCompleteMe'
- Bundle 'jelera/vim-javascript-syntax'
- Bundle 'pangloss/vim-javascript'
- Bundle 'nathanaelkane/vim-indent-guides'
- Bundle 'marijnh/tern_for_vim'
+" My Plugins here:
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'tomasr/molokai'
+Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'Raimondi/delimitMate'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'marijnh/tern_for_vim'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to
+" auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
+syntax on
 
+"Line Numbers
+:set nu
 
- filetype plugin indent on     " required!
- "
- " Brief help
- " :BundleList          - list configured bundles
- " :BundleInstall(!)    - install(update) bundles
- " :BundleSearch(!) foo - search(or refresh cache first) for foo
- " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
- "
- " see :h vundle for more details or wiki for FAQ
- " NOTE: comments after Bundle command are not allowed..
- syntax on
+"Indent Configurations
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
- "Line Numbers
- :set nu
+"Powerline Settings
+set laststatus=2 " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colorst
 
- "Indent Configurations
- set smartindent
- set tabstop=2
- set shiftwidth=2
- set expandtab
+"Backspace Bug Fix
+set backspace=2
+set backspace=indent,eol,start
 
- "Powerline Settings
- set laststatus=2 " Always show the statusline
- set encoding=utf-8 " Necessary to show Unicode glyphs
- set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colorst
+"Remap Keys
+nmap <F7> :NERDTreeToggle<CR>
+nmap <F8> :TagbarToggle<CR>
 
- "Backspace Bug Fix
- set backspace=2
- set backspace=indent,eol,start
+"Automatically Start RainbowParentheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
- "Remap Keys
- nmap <F7> :NERDTreeToggle<CR>
- nmap <F8> :TagbarToggle<CR>
+"User Molokai colorscheme
+let g:molokai_original = 1
+colorscheme molokai
 
- "Automatically Start RainbowParentheses
- au VimEnter * RainbowParenthesesToggle
- au Syntax * RainbowParenthesesLoadRound
- au Syntax * RainbowParenthesesLoadSquare
- au Syntax * RainbowParenthesesLoadBraces
+"Git Gutter settings
+highlight clear SignColumn
 
- "User Molokai colorscheme
- let g:molokai_original = 1
- colorscheme molokai
+"YouCompleteMe setttings
+let g:ycm_add_preview_to_completeopt=0
+let g:ycm_confirm_extra_conf=0
+set completeopt-=preview
 
- "Git Gutter settings
- highlight clear SignColumn
-
- "YouCompleteMe setttings
- let g:ycm_add_preview_to_completeopt=0
- let g:ycm_confirm_extra_conf=0
- set completeopt-=preview
- 
- "Syntastic Configuration
- let g:syntastic_check_on_open=1
+"Syntastic Configuration
+let g:syntastic_check_on_open=1
