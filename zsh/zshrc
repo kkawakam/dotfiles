@@ -40,20 +40,27 @@ ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(rails git ruby bower bundler docker npm tmux)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
+# Bootstrap NVM
+export NVM_DIR="/home/main/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# BootStrap RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 #Tmux alias to allow 256 color mode
 alias tmux='tmux -2'
 
-### Added by the Heroku Toolbelt & Gradle
-export PATH="/usr/local/heroku/bin:$HOME/bin/gradle-1.12/bin:$PATH"
+## Added by the Heroku Toolbelt & Gradle
+export PATH=/usr/local/heroku/bin:$HOME/bin/gradle-1.12/bin:$PATH
 
-export NVM_DIR="/home/main/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# Add Golang binaries to path
+export PATH=$PATH:/usr/local/go/bin
