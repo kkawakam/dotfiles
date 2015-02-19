@@ -23,6 +23,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'phildawes/racer'
+Plugin 'wting/rust.vim'
+Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,11 +81,10 @@ colorscheme molokai
 "Git Gutter settings
 highlight clear SignColumn
 
-"YouCompleteMe setttings
-let g:ycm_add_preview_to_completeopt=0
-let g:ycm_confirm_extra_conf=0
-set completeopt-=preview
-
 "Syntastic Configuration
 let g:syntastic_check_on_open=1
-let g:jsx_ext_required = 0
+
+"Rust autocomplete settings
+set hidden
+let g:racer_cmd = $HOME."/Repo/racer/target/release/racer"
+let $RUST_SRC_PATH= $HOME."/Repo/rust/src/"
