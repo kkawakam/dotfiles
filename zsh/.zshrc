@@ -70,3 +70,5 @@ alias git=hub
 
 # added by travis gem
 [ -f /home/main/.travis/travis.sh ] && source /home/main/.travis/travis.sh
+
+export RUST_SRC_PATH=$HOME/Repo/rust/src

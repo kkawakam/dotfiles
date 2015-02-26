@@ -24,8 +24,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'phildawes/racer'
-Plugin 'wting/rust.vim'
 Plugin 'ervandew/supertab'
+Plugin 'rust-lang/rust.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
