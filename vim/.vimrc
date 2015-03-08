@@ -26,6 +26,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'phildawes/racer'
 Plugin 'ervandew/supertab'
 Plugin 'rust-lang/rust.vim'
+Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -88,3 +89,4 @@ let g:syntastic_check_on_open=1
 set hidden
 let g:racer_cmd = $HOME."/Repo/racer/target/release/racer"
 let $RUST_SRC_PATH= $HOME."/Repo/rust/src/"
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
