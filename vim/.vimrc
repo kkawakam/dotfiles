@@ -25,6 +25,7 @@ Plugin 'phildawes/racer'
 Plugin 'ervandew/supertab'
 Plugin 'rust-lang/rust.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -80,11 +81,6 @@ colorscheme molokai
 "Git Gutter settings
 highlight clear SignColumn
 
-"Syntastic Configuration
-let g:syntastic_check_on_open=1
-
 "Rust autocomplete settings
-set hidden
-let g:racer_cmd = $HOME."/Repo/racer/target/release/racer"
-let $RUST_SRC_PATH= $HOME."/Repo/rust/src/"
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+nnoremap <F6> :YcmCompleter GoTo<CR>
+let g:ycm_rust_src_path = $HOME."/Repo/rust/src/"
