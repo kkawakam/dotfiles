@@ -14,19 +14,17 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'tomasr/molokai'
 Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/syntastic'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'phildawes/racer'
 Plugin 'ervandew/supertab'
 Plugin 'rust-lang/rust.vim'
-Plugin 'ervandew/supertab'
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
