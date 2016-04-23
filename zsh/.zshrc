@@ -44,9 +44,6 @@ plugins=(rails git github hub ruby bower bundler docker npm tmux)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-
 # Bootstrap NVM
 export NVM_DIR="/home/main/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -64,9 +61,6 @@ export PATH=/usr/local/heroku/bin:$HOME/bin/gradle-1.12/bin:$PATH
 
 # Add Golang binaries to path
 export PATH=$PATH:/usr/local/go/bin
-
-# Add Rust-lang source path for Racer completion
-export RUST_SRC_PATH=$HOME/Repo/rust/src
 
 # alias hub as git
 alias git=hub
