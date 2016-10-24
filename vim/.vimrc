@@ -83,4 +83,3 @@ highlight clear SignColumn
 
 "Rust autocomplete settings
 nnoremap <F6> :YcmCompleter GoTo<CR>
-let g:ycm_rust_src_path = $HOME."/Repo/rust/src/"
