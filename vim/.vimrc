@@ -14,15 +14,18 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'tomasr/molokai'
 Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/syntastic'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'phildawes/racer'
+Plugin 'ervandew/supertab'
+Plugin 'rust-lang/rust.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,11 +81,6 @@ colorscheme molokai
 "Git Gutter settings
 highlight clear SignColumn
 
-"YouCompleteMe setttings
-let g:ycm_add_preview_to_completeopt=0
-let g:ycm_confirm_extra_conf=0
-set completeopt-=preview
-
-"Syntastic Configuration
-let g:syntastic_check_on_open=1
-let g:jsx_ext_required = 0
+"Rust autocomplete settings
+nnoremap <F6> :YcmCompleter GoTo<CR>
+let g:ycm_rust_src_path = $HOME."/Repo/rust/src/"
