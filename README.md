@@ -1,26 +1,28 @@
 ##Installation Instructions
 
-###Install Base Vim Configuration
-1. Clone repo into directory of your choice
-1. Sym link the vimrc in the repo to ~/.vimrc
-1. Use vundle to install all vim plugins
+### Prerequisite
+* gnu stow
+* git
+* tmux
+* Zsh
+* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+* Vim
+* [rustup](https://www.rustup.rs/)
 
+### Setup dotfiles
+Run the following commands
 ```
-git clone https://github.com/kkawakam/dotfiles.git 
-ln -s dotfiles/vim/vimrc ~/.vimrc
-vim +BundleInstall
+$ cd ~
+$ git clone https://github.com/kkawakam/dotfiles.git
+$ cd dotfiles
+$ stow tmux
+$ stow vim
+$ stow zsh
 ```
 
-###Install YouCompleteMe
-[Refer to the Documentation...](https://github.com/Valloric/YouCompleteMe)
-
-###Install Javascript Linter and Tern
-Make sure YouCompleteMe is installed
-
-1. Install [Node.js](http://nodejs.org/)
-1. Install JShint using npm
-
-```
-npm install -g jshint
-```
+### Configuring Vim
+1. Install [Vundle](https://github.com/VundleVim/Vundle.vim.git)
+2. Install [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+   * with Clang completer
+   * with Racer completer
 
