@@ -40,30 +40,13 @@ ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails git github hub ruby bower bundler docker npm tmux)
+plugins=(git github tmux)
 
+# Source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-# Bootstrap NVM
-export NVM_DIR="/home/main/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# BootStrap RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-#Tmux alias to allow 256 color mode
+# Tmux alias to allow 256 color mode
 alias tmux='tmux -2'
 
-## Added by the Heroku Toolbelt & Gradle
-export PATH=/usr/local/heroku/bin:$HOME/bin/gradle-1.12/bin:$PATH
-
-# Add Golang binaries to path
-export PATH=$PATH:/usr/local/go/bin
-
-# alias hub as git
-alias git=hub
-
-# added by travis gem
-[ -f /home/main/.travis/travis.sh ] && source /home/main/.travis/travis.sh
+# Add Cargo to the path
+export PATH="$HOME/.cargo/bin:$PATH"
