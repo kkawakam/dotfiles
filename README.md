@@ -1,28 +1,13 @@
-##Installation Instructions
+## Prerequisite
+Install the following software:
+* [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+* [Vagrant](https://www.vagrantup.com/downloads.html)
 
-### Prerequisite
-* gnu stow
-* git
-* tmux
-* Zsh
-* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-* Vim
-* [rustup](https://www.rustup.rs/)
+## Setup
+Run the following from the command line:
 
-### Setup dotfiles
-Run the following commands
-```
-$ cd ~
-$ git clone https://github.com/kkawakam/dotfiles.git
-$ cd dotfiles
-$ stow tmux
-$ stow vim
-$ stow zsh
+```zsh
+$ vagrant up
 ```
 
-### Configuring Vim
-1. Install [Vundle](https://github.com/VundleVim/Vundle.vim.git)
-2. Install [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
-   * with Clang completer
-   * with Racer completer
-
+After a few minutes, you should have a fully provisioned development environment.
