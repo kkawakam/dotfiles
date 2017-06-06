@@ -50,3 +50,6 @@ alias tmux='tmux -2'
 
 # Add Cargo to the path
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# Load Solarized dircolors
+eval `dircolors $HOME/.dir_colors/dircolors`
