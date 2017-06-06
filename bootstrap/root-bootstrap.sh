@@ -30,3 +30,15 @@ chsh -s `which zsh` vagrant
 apt-get -y install build-essential cmake
 apt-get -y install python-dev python3-dev
 
+# Install dconf for Solarized for Gnome Terminal
+apt-get -y install dconf-cli
+
+# Remove byobu
+apt-get -y remove --auto-remove byobu
+apt-get -y purge --auto-remove byobu
+
+# Install Dependencies for Android Studio
+apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+
+# Install unzip
+apt-get install unzip
