@@ -26,13 +26,18 @@ Vagrant.configure("2") do |config|
     vb.name = "Ubuntu Development Machine"
   
     # Customize the amount of memory on the VM:
-    vb.memory = "2048"
+    vb.memory = "4096"
+
+    # Set the VRAM
+    vb.customize ["modifyvm", :id, "--vram", "64"]
   end
 
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision :shell, path: "bootstrap/root-bootstrap.sh", privileged: true
+  config.vm.provision :shell, path: "bootstrap/root-bootstrap.sh"
+  config.vm.provision :shell, path: "bootstrap/root-install-intellij.sh"
+  config.vm.provision :shell, path: "bootstrap/root-install-android-studio.sh"
   config.vm.provision :shell, path: "bootstrap/user-bootstrap.sh", privileged: false
-  config.vm.provision :shell, path: "bootstrap/reboot.sh", privileged: true
+  config.vm.provision :shell, path: "bootstrap/root-reboot.sh"
 end
