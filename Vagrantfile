@@ -38,7 +38,6 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision :shell, path: "bootstrap/root-bootstrap.sh"
   config.vm.provision :shell, path: "bootstrap/root-install-intellij.sh"
-  config.vm.provision :shell, path: "bootstrap/root-install-android-studio.sh"
   config.vm.provision :shell, path: "bootstrap/user-bootstrap.sh", privileged: false
   config.vm.provision :shell, path: "bootstrap/root-reboot.sh"
 end
