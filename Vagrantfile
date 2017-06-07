@@ -29,7 +29,8 @@ Vagrant.configure("2") do |config|
     vb.memory = "4096"
 
     # Set the VRAM
-    vb.customize ["modifyvm", :id, "--vram", "64"]
+    vb.customize ["modifyvm", :id, "--vram", "128"]
+    vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
   end
 
   # Enable provisioning with a shell script. Additional provisioners such as
