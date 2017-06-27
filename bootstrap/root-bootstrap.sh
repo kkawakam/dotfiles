@@ -4,8 +4,40 @@
 apt-get update
 apt-get dist-upgrade
 
-# Install Gnome 3
-sudo apt-get -y install ubuntu-gnome-desktop
+# Install Lubuntu Desktop
+sudo apt-get -y install lubuntu-desktop
+
+# Install Gnome Terminal and Configure Desktop Entry
+sudo apt-get -y install gnome-terminal 
+cat > /usr/share/applications/gnome-terminal.desktop <<EOL
+[Desktop Entry]
+Name=Gnome Terminal
+Comment=Use the command line
+Keywords=shell;prompt;command;commandline;cmd;
+TryExec=gnome-terminal
+Exec=gnome-terminal
+Icon=utilities-terminal
+Type=Application
+X-GNOME-DocPath=gnome-terminal/index.html
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gnome-terminal
+X-GNOME-Bugzilla-Component=BugBuddyBugs
+X-GNOME-Bugzilla-Version=3.18.3
+Categories=GNOME;GTK;System;TerminalEmulator;
+StartupNotify=true
+X-GNOME-SingleWindow=false
+#OnlyShowIn=GNOME;Unity;
+Actions=New
+X-Ubuntu-Gettext-Domain=gnome-terminal
+
+[Desktop Action New]
+Name=New Gnome Terminal
+Exec=gnome-terminal
+#OnlyShowIn=Unity
+EOL
+
+# Install Synapse App Launcher
+sudo apt-get -y install synapse
 
 # Install Open JDK 8
 apt-get -y install openjdk-8-jdk
