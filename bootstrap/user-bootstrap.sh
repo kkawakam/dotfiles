@@ -47,3 +47,39 @@ mv PowerlineSymbols.otf ~/.fonts/
 mkdir -p ~/.config/fontconfig/conf.d #if directory doesn't exists
 fc-cache -vf ~/.fonts/
 mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+
+# Set configuration for synapse app launcher
+mkdir -p ~/.config/synapse
+cat > ~/.config/synapse/config.json <<EOL
+{
+  "ui" : {
+    "shortcuts" : {
+      "activate" : "<Super>space",
+      "execute" : "Return",
+      "execute-without-hide" : "<Shift>Return",
+      "delete-char" : "BackSpace",
+      "delete-word" : "<Control>BackSpace",
+      "alternative-delete-char" : "Delete",
+      "next-match" : "Down",
+      "prev-match" : "Up",
+      "first-match" : "Home",
+      "last-match" : "End",
+      "next-match-page" : "Page_Down",
+      "prev-match-page" : "Page_Up",
+      "next-category" : "Right",
+      "prev-category" : "Left",
+      "next-search-type" : "Tab",
+      "prev-search-type" : "<Shift>ISO_Left_Tab",
+      "cancel" : "Escape",
+      "paste" : "<Control>v",
+      "alt-paste" : "<Shift>Insert",
+      "exit" : "<Control>q"
+    },
+    "global" : {
+      "ui-type" : "virgilio"
+    }
+  }
+}
+EOL
+mkdir -p ~/.config/autostart
+ln -s /usr/share/applications/synapse.desktop ~/.config/autostart/synapse.desktop

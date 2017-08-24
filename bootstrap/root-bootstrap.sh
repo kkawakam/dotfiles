@@ -74,3 +74,7 @@ apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i
 
 # Install unzip
 apt-get install unzip
+
+# Install Visual Studio Code
+wget -O /tmp/visual_studio_code.deb https://az764295.vo.msecnd.net/stable/41abd21afdf7424c89319ee7cb0445cc6f376959/code_1.15.1-1502903936_amd64.deb 
+apt-get install /tmp/visual_studio_code.deb

@@ -31,6 +31,8 @@ Vagrant.configure("2") do |config|
     # Set the VRAM
     vb.customize ["modifyvm", :id, "--vram", "128"]
     vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
+    vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+    vb.customize ["modifyvm", :id, "--draganddrop", "bidirectional"]
   end
 
   # Enable provisioning with a shell script. Additional provisioners such as
