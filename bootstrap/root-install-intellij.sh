@@ -1,8 +1,8 @@
 #!/bin/bash -x
 
-# Install to Intellij Community Edition
-ed="C"
-VERSION="2017.1.4"
+# Install to Intellij Ultimate Edition
+ed="U"
+VERSION="2018.1.2"
 URL="https://download.jetbrains.com/idea/ideaI$ed-$VERSION.tar.gz"
 
 # Truncate filename
