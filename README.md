@@ -2,6 +2,8 @@
 Install the following software:
 * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 * [Vagrant](https://www.vagrantup.com/downloads.html)
+* Install Vagrant Plugins
+  * ```vagrant plugin install vagrant-disksize```
 
 ## Provisioning a new VM
 Run the following from the command line:
