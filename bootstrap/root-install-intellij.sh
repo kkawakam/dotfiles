@@ -2,7 +2,7 @@
 
 # Install to Intellij Ultimate Edition
 ed="U"
-VERSION="2018.3.1"
+VERSION="2018.3.2"
 URL="https://download.jetbrains.com/idea/ideaI$ed-$VERSION.tar.gz"
 
 # Truncate filename
