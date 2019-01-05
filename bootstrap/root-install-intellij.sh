@@ -32,7 +32,7 @@ chmod -R +rwx ${DIR}
 DESK=/usr/share/applications/idea.desktop
 
 # Add desktop shortcut
-printf "[Desktop Entry]\nEncoding=UTF-8\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=%s/idea.sh\nIcon=%s/idea.png\nTerminal=false\nStartupNotify=true\nType=Application" "$BIN" "$BIN" >> ${DESK}
+printf "[Desktop Entry]\nEncoding=UTF-8\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=%s/idea.sh\nIcon=%s/idea.png\nTerminal=false\nStartupNotify=true\nType=Application\nCategories=Utility;TextEditor;Development;IDE;" "$BIN" "$BIN" >> ${DESK}
 
 # Create symlink entry
 ln -s ${BIN}/idea.sh /usr/local/bin/idea
