@@ -4,6 +4,7 @@ Install the following software:
 * [Vagrant](https://www.vagrantup.com/downloads.html)
 * Install Vagrant Plugins
   * ```vagrant plugin install vagrant-disksize```
+  * ```vagrant plugin install vagrant-vbguest```
 
 ## Provisioning a new VM
 Run the following from the command line:
