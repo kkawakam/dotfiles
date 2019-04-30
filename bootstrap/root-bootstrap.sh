@@ -81,3 +81,9 @@ apt-get install tig
 # Install Visual Studio Code
 wget -O /tmp/visual_studio_code.deb https://az764295.vo.msecnd.net/stable/41abd21afdf7424c89319ee7cb0445cc6f376959/code_1.15.1-1502903936_amd64.deb 
 apt-get install /tmp/visual_studio_code.deb
+
+# Install Gnome Keyring
+sudo apt-get install libgnome-keyring-dev
+cd /usr/share/doc/git/contrib/credential/gnome-keyring
+sudo make
+git config --global credential.helper /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
