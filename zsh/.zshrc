@@ -48,8 +48,12 @@ source $ZSH/oh-my-zsh.sh
 # Tmux alias to allow 256 color mode
 alias tmux='tmux -2'
 
-# Add Cargo to the path
-export PATH="$HOME/.cargo/bin:$PATH"
+# Add Cargo + Go  to the path
+export PATH="$HOME/.cargo/bin:$HOME/bin:/usr/local/go/bin:$PATH"
+
+# Set vim as default editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # Load Solarized dircolors
 eval `dircolors $HOME/.dir_colors/dircolors`
