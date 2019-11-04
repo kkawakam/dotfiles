@@ -40,7 +40,7 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision :shell, path: "bootstrap/root-bootstrap.sh"
-  config.vm.provision :shell, path: "bootstrap/root-install-intellij.sh"
+  config.vm.provision :shell, path: "bootstrap/root-install-jetbrains-toolbox.sh"
   config.vm.provision :shell, path: "bootstrap/user-bootstrap.sh", privileged: false
   config.vm.provision :shell, path: "bootstrap/root-reboot.sh"
 end
