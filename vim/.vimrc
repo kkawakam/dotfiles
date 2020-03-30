@@ -21,9 +21,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'phildawes/racer'
 Plugin 'ervandew/supertab'
-Plugin 'rust-lang/rust.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 
@@ -80,6 +78,3 @@ colorscheme molokai
 
 "Git Gutter settings
 highlight clear SignColumn
-
-"Rust autocomplete settings
-nnoremap <F6> :YcmCompleter GoTo<CR>

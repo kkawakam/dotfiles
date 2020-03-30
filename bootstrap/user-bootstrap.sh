@@ -17,7 +17,7 @@ vim -E -s -c "source ~/.vimrc" -c PluginInstall -c qa
 
 # Install YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer --racer-completer
+./install.py --clang-completer
 
 # Install oh-my-zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
