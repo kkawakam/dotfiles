@@ -1,10 +1,9 @@
 ## Prerequisite
 Install the following software:
-* [VMWare Workstation Pro 16](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
+* [VMWare Player](https://www.vmware.com/products/workstation-player.html)
 * [Vagrant](https://www.vagrantup.com/downloads.html)
 * Install Vagrant Plugins
    * `vagrant plugin install vagrant-vmware-desktop`
-   * `vagrant plugin license vagrant-vmware-desktop $PATH_TO_LICENSE_FILE`
 
 ## Provisioning a new VM
 Run the following from the command line:
