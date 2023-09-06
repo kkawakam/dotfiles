@@ -6,11 +6,11 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure("2") do |config|
-  config.vm.box = "bento/ubuntu-20.04"
+  config.vm.box = "bento/ubuntu-22.04"
   config.vm.provider "vmware_player" do |v|
     v.gui = true
-    v.vmx["numvcpus"] = "2"
-    v.vmx["memsize"] = "8192"
+    v.vmx["numvcpus"] = "7"
+    v.vmx["memsize"] = "32768"
     v.vmx["displayName"] = "Ubuntu Development Machine"
   end
 
