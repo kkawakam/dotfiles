@@ -7,7 +7,7 @@
 # you're doing.
 Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-20.04"
-  config.vm.provider "vmware_desktop" do |v|
+  config.vm.provider "vmware_player" do |v|
     v.gui = true
     v.vmx["numvcpus"] = "2"
     v.vmx["memsize"] = "8192"
