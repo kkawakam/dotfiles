@@ -11,7 +11,7 @@ Run the following from the command line:
 ```zsh
 $ git clone https://github.com/kkawakam/dotfiles.git
 $ cd dotfiles
-$ vagrant up --provider vmware_player
+$ vagrant up --provider vmware_desktop
 ```
 
 ## Post-Provisioning Setup
