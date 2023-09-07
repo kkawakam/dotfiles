@@ -1,7 +1,20 @@
 ## Prerequisite
 Install the following software:
 * [VirtualBox](https://www.virtualbox.org/)
-* [Vagrant](https://www.vagrantup.com/downloads.html)
+* [Ubuntu Desktop](https://ubuntu.com/desktop)
+
+## Steps
+1. Load up the Ubuntu Desktop .iso into VirtualBox and create a `main` user
+2. Install guest additions
+3. Install `git`
+4. Clone this repo
+4. Run `root-bootstrap.sh` as root
+5. Run `user-bootstrap.sh` as user
+
+
+
+### Appendix
+Old instructions, removed usage of vagrant due to flaky issues that occur during provisioning.
 
 ## Provisioning a new VM
 Run the following from the command line:
