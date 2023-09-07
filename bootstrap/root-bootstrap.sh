@@ -3,7 +3,6 @@
 # Update repositories and existing packages
 apt -y update
 apt -y upgrade
-do-release-upgrade
 
 # Install Ubuntu Desktop
 apt -y install ubuntu-desktop
