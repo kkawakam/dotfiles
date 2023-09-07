@@ -1,9 +1,7 @@
 ## Prerequisite
 Install the following software:
-* [VMWare Player](https://www.vmware.com/products/workstation-player.html)
+* [VirtualBox](https://www.virtualbox.org/)
 * [Vagrant](https://www.vagrantup.com/downloads.html)
-* Install Vagrant Plugins
-   * `vagrant plugin install vagrant-vmware-desktop`
 
 ## Provisioning a new VM
 Run the following from the command line:
@@ -11,7 +9,7 @@ Run the following from the command line:
 ```zsh
 $ git clone https://github.com/kkawakam/dotfiles.git
 $ cd dotfiles
-$ vagrant up --provider vmware_desktop
+$ vagrant up --provider virtualbox
 ```
 
 ## Post-Provisioning Setup

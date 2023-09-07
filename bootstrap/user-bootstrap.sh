@@ -45,5 +45,5 @@ fc-cache -vf ~/.fonts/
 mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
 # Install sdkman
-curl -s "https://get.sdkman.io" | zsh
+curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
