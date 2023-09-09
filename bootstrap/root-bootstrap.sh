@@ -36,6 +36,9 @@ apt -y install tig
 # Install tree
 apt -y install tree
 
+# Install dependencies for jetbrains toolbox
+apt -y install libfuse2 libxi6 libxrender1 libxtst6 mesa-utils libfontconfig libgtk-3-bin tar
+
 # Install golang
 cd ~
 wget https://golang.org/dl/go1.21.0.linux-amd64.tar.gz

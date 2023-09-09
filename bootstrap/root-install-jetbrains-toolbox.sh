@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 # Install to Jetbrains Toolbox
-VERSION="2.0.2"
+VERSION="2.0.3.17006"
 URL="https://download.jetbrains.com/toolbox/jetbrains-toolbox-$VERSION.tar.gz"
 
 # Truncate filename
