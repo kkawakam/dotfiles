@@ -1,15 +1,19 @@
 ## Prerequisite
 Install the following software:
 * [VirtualBox](https://www.virtualbox.org/)
-* [Ubuntu Desktop](https://ubuntu.com/desktop)
+* [Kubuntu](https://kubuntu.org/)
 
 ## Steps
 1. Load up the Ubuntu Desktop .iso into VirtualBox and create a `main` user
-2. Install guest additions
-3. Install `git`
+2. Install `git`
    * [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux)
    * [Setting your commit email address](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address)
-4. Clone this repo
+4. Download appropriate scripts
+   ```bash
+   wget https://raw.githubusercontent.com/kkawakam/dotfiles/master/bootstrap/root-bootstrap.sh
+   wget https://raw.githubusercontent.com/kkawakam/dotfiles/master/bootstrap/root-install-jetbrains-toolbox.sh
+   wget https://raw.githubusercontent.com/kkawakam/dotfiles/master/bootstrap/user-bootstrap.sh
+   ```
 5. Run `root-bootstrap.sh` as root
 6. Run `root-install-jetbrains-toolbox.sh` as root
 7. Run `user-bootstrap.sh` as user
