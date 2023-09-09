@@ -4,7 +4,9 @@
 mkdir ~/Repos
 
 # Install all of the dotfiles
-cd ~/Repos/dotfiles
+cd ~
+git clone https://github.com/kkawakam/dotfiles
+cd dotfiles
 stow tmux
 stow vim
 stow zsh
